@@ -1,0 +1,50 @@
+:root {
+  --background: black;
+  --fontcolor: white; /* #5a1616 */
+  --highlight: #4E4FEB;
+  --gradient: linear-gradient(to right, #5e86db, #4E4FEB, #1a1ae6);
+}
+
+body {
+  color: var(--fontcolor);
+  font-family: "Poppins";
+  background: var(--background);
+  overflow-x: hidden;
+}
+
+#viewport {
+  position: absolute;
+  top: 100px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+#viewport .page {
+  width: 100%;
+  height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#horizontal {
+  background: var(--background);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 100px;
+  width: calc(100% - 50px);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding: 0px 25px;
+}
+
+#big-title {
+  font-size: 3em;
+  font-weight: bolder;
+}
