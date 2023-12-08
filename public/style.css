@@ -22,6 +22,7 @@ body {
 }
 
 #viewport .page {
+  position: relative;
   width: 100%;
   height: calc(100vh - 100px);
   display: flex;
@@ -33,7 +34,7 @@ body {
 #horizontal {
   background: var(--background);
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
 
   height: 100px;
@@ -47,4 +48,240 @@ body {
 #big-title {
   font-size: 3em;
   font-weight: bolder;
+}
+
+#two-cols {
+  width: 60%;
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between;
+  align-content: center;
+  gap: 50px;
+}
+
+.col-list {
+  width: 100%;
+  height: fit-content;
+}
+
+.webserv {
+  width: 250px;
+  height: fit-content;
+  border-radius: 20px;
+  position: relative;
+  margin: auto;
+  text-align: center;
+  padding: 25px;
+  transition: all 200ms ease-in-out;
+  filter: blur(2px);
+}
+
+.webserv:hover {
+  transform: scale(1.1);
+  filter: blur(0);
+}
+
+.webserv img {
+  width: 100px;
+  height: 100px;
+}
+
+#side-scroller {
+  display: flex;
+  flex-direction: row !important;
+  gap: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+.webserv .infos h1 {
+  margin: 0px;
+  margin-top: 10px;
+}
+
+.webserv .infos p {
+  font-style: italic;
+  color: darkgrey;
+}
+
+.webserv .infos button {
+  filter: drop-shadow(0 0 3rem var(--highlight));
+}
+
+#main-button {
+  filter: drop-shadow(0 0 10.75rem var(--highlight));
+}
+
+#ibiscus1 {
+  position: absolute;
+  bottom: 200px;
+  right: -400px;
+}
+
+#ibiscus2 {
+  position: absolute;
+  left: -400px;
+  bottom: -340px;
+}
+
+ul li {
+  padding: 20px;
+  width: 400px;
+  color: white;
+  margin-bottom: 20px;
+  padding-left: 30px;
+  
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, .1);
+  backdrop-filter: blur(5px);
+  transition: all 200ms ease-in-out;
+}
+
+.col-list ul li:hover {
+  transform: scale(1.1);
+}
+
+.col-list ul {
+  list-style: none; /* Remove default bullets */
+}
+
+.col-list ul li::before {
+  content: ">_";
+  color: var(--highlight);
+  font-weight: bold;
+  display: inline-block;
+  width: 2em;
+  margin-left: -1em;
+}
+
+input[type="text"] {
+  padding: 20px 30px;
+  background: black;
+  width: calc(100% - 60px);
+  border: none;
+  color: white;
+  font-family: "Poppins";
+  margin-top: 50px;
+  border-radius: 20px;
+}
+
+input[type="text"]::placeholder {
+  color: darkgrey;
+  font-family: "Poppins";
+}
+
+*:focus {
+  border: none;
+  outline: none;
+}
+
+#gpt-results {
+  margin-top: 50px;
+  width: 800px;
+}
+
+.textured {
+  margin-top: 200px;
+  background: url(cdn/assets/texture.png);
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.textured::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, black, transparent);
+  position: absolute;
+  bottom: 0px;
+}
+
+.textured::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to bottom, black, transparent);
+  position: absolute;
+  top: 0px;
+}
+
+#morpho {
+  position: absolute;
+  left: 0px;
+  width: 298px;
+  height: 406px;
+  transition: all 100ms ease-in-out;
+  transform: scale(0.7);
+}
+
+#enormous {
+  font-size: 10em;
+  font-weight: black;
+  transition: all 100ms ease-in-out;
+  margin: 0px;
+}
+
+#chatbot {
+  border: 2px solid white;
+  border-radius: 25px;
+  padding: 20px;
+  width: 700px;
+  filter: drop-shadow(0 0 10.75rem var(--highlight));
+}
+
+#chatbot p {
+  padding: 10px 20px;
+  border-radius: 20px;
+  background: var(--highlight);
+  color: white;
+  float: left;
+  width: 70%;
+}
+
+#chatbot p.me {
+  background: white;
+  color: black;
+  float: right;
+  width: 70%;
+}
+
+#messages {
+  max-height: 300px;
+  overflow-y: scroll;
+}
+
+blue, #air-pollution {
+  color: var(--highlight)
+}
+
+#horizontal img {
+  height: 70%;
+}
+
+pre {
+  font-size: 1em;
+  font-family: "Poppins";
+}
+
+a {
+  text-decoration: none;
+  color: var(--highlight);
+  cursor: pointer;
+}
+
+#horizontal a {
+  color: white;
+}
+
+#charlie {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  height: 100px;
 }

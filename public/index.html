@@ -9,36 +9,118 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,800;1,400&display=swap" rel="stylesheet">
 
+    <title>Nuit de l'Info</title>
+    <meta property="og:title" content="Nuit de l'Info">
+    <link rel="icon" href="cdn/assets/favicon.webp">
     
     <!--
-    <title> Home | CMK.</title>
-    <meta property="og:title" content="CallMeKitsu.">
-    <link rel="icon" href="../cdn/assets/branding/logo.png">
     <meta name="description" content="">
-    <meta property="og:description" content="J">
+    <meta property="og:description" content="">
     <meta property="og:image" content="">
     -->
   </head>
   
-  <body onload="main()">
+  <body>
 
     <div id="horizontal">
-      <img src="logo">
-      <a>Sources</a>
+      <a href="sources">Sources</a>
     </div>
     <div id="viewport">
       <div class="page">
-        <h1 id="big-title">Think Greener.</h1>
-        <button>
+        <h1 id="big-title">Hack your emissions.</h1>
+        <button id="main-button" onclick="startScroll()">
           <span>quelles solutions ?</span>
         </button>
+        <img id="ibiscus1" class="parallax" src="cdn/assets/ibiscus1.webp">
+        <img id="ibiscus2" class="parallax" src="cdn/assets/ibiscus2.webp">
       </div>
-      <div class="page"></div>
-      <div class="page"></div>
-      <div class="page"></div>
-      <div class="page"></div>
+      <div class="page textured">
+        <div id="two-cols">
+          <div class="col-list">
+            <ul>
+              <li>Le forçage radiatif atteindra bientôt un maximum, le réchauffement climatique sature !</li>
+              <li>Le réchauffement climatique est simplement une période de chaleur cyclique comme la Terre en a connu des dizaines.</li>
+              <li>Quand les glaciers fondent, le niveau de l'océan ne monte pas, puisque la glace flotte dans l'eau !</li>
+              <li>fake arg</li>
+            </ul>
+          </div>
+          <div class="col-list">
+            <ul>
+              <li>Explication de David Louapre <a href="https://www.youtube.com/watch?v=ewc8FBtEKPs">🔗</a</li>
+              <li>On a enregistré un pic de CO2 dans l'atmosphère inégalé en 14 millions d'années suite à la révolution industrielle...</li>
+              <li>En effet, mais l'eau chaude occupe plus d'espace que l'eau froide ! De plus, la fonte des glaciers perturbe les courants marins indispensables aux équilibres climatiques.</li>
+              <li>true arg</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="page">
+        <h1 id="enormous">Aujourd'hui<blue>.</blue></h1>
+        <h3>Qualité de l'air <span id="air-pollution"></span> chez vous !</h3>
+        <img src="cdn/assets/morpho.gif" id="morpho">
+      </div>
+      <div class="page">
+        <div id="side-scroller">
+          <div class="webserv">
+            <img src="cdn/assets/ecosia.png">
+            <div class="infos">
+              <h1>Ecosia</h1>
+              <p>Le moteur de recherche qui plante des arbres à chaque recherche en ligne, transforme vos clics en actions concrètes pour un avenir plus vert et durable.</p>
+              <br/>
+              <button onclick="link('https://www.ecosia.org/')">
+                <span>Essayer la solution</span>
+              </button>
+            </div>
+          </div>
+          <div class="webserv">
+            <img src="cdn/assets/cfp.webp">
+            <div class="infos">
+              <h1>Carbon FootPrint</h1>
+              <p>Calculer en ligne et rapidement son empreinte carbone en répondant à un sondage !</p>
+              <br/>
+              <button onclick="link('https://www.carbonfootprint.com/')">
+                <span>Essayer la solution</span>
+              </button>
+            </div>
+          </div>
+          <div class="webserv">
+            <img src="cdn/assets/nano.webp">
+            <div class="infos">
+              <h1>Nano</h1>
+              <p>Cryptomonnaie reconnue qui utilise le DAG pour réaliser des transactions instantanées éco-responsables, se démarquant en tant qu'alternative.</p>
+              <br/>
+              <button onclick="link('https://nano.org/fr')">
+                <span>Essayer la solution</span>
+              </button>
+            </div>
+          </div>
+          <div class="webserv">
+            <img src="cdn/assets/duckduckgo.png">
+            <div class="infos">
+              <h1>DuckDuckGo</h1>
+              <p>La recherche en ligne sans compromis sur la vie privée. Oublie les traqueurs et les publicités, et explore le web en toute tranquillité.</p>
+              <br/>
+              <button onclick="link('https://duckduckgo.com/')">
+                <span>Essayer la solution</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <div class="page">
+        <div id="chatbot">
+          <div id="messages">
+            <div class="message"><p>Je suis votre assistant ! Posez moi vos questions et je vous proposerai de nouvelles habitudes à adopter pour réduire votre empreinte carbone.</p></div>
+          </div>
+          <input type="text" id="bigsearch" 
+            placeholder="Quelle habitude pourrais-je changer ?" onchange="sendmessage(this)">
+          </div>
+      </div>
     </div>
   
     <script src="https://callmekitsu.kitsuforyou.repl.co/h/tsu.js"></script>

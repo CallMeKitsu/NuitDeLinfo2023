@@ -9,7 +9,7 @@ button {
   background: var(--gradient);
   color: white;
   overflow: hidden;
-  filter: drop-shadow(0 0 10.75rem var(--highlight));
+  cursor: pointer;
 }
 
 button svg {
